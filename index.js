@@ -7,12 +7,13 @@ const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 const client = new MongoClient(process.env.MONGODB_URI);
-const database = client.db("courseflow");
+const database = client.db("CourseFlow");
 const coursesCollection = database.collection("courses");
+
 async function connectToDatabase() {
     try {
         await client.connect();
-       console.log("Connected to MongoDB!"); 
+        console.log("Connected to MongoDB!");
     } catch (error) {
         console.error("MongoDB connection failed:", error);
     }
@@ -33,12 +34,12 @@ app.post("/api/courses", async (req, res) => {
     const result = await coursesCollection.insertOne(course);
 
     res.json({
-    message: "Course received successfully",
-    course: {
-        ...course,
-        _id: result.insertedId
-    }
-});
+        message: "Course received successfully",
+        course: {
+            ...course,
+            _id: result.insertedId
+        }
+    });
 });
 
 app.put("/api/courses/:id", async (req, res) => {
@@ -57,16 +58,16 @@ app.put("/api/courses/:id", async (req, res) => {
 });
 
 app.delete("/api/courses/:id", async (req, res) => {
-const courseId = req.params.id;
+    const courseId = req.params.id;
 
-const result = await coursesCollection.deleteOne({
-    _id: new ObjectId(courseId)
-});
+    const result = await coursesCollection.deleteOne({
+        _id: new ObjectId(courseId)
+    });
 
-res.json({
-    message: "Course deleted successfully",
-    deletedCount: result.deletedCount
-});
+    res.json({
+        message: "Course deleted successfully",
+        deletedCount: result.deletedCount
+    });
 });
 
 app.get("/{*splat}", (req, res) => {
@@ -75,7 +76,7 @@ app.get("/{*splat}", (req, res) => {
 
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log(`CourseFlow server running on port ${PORT}`);
+        console.log(`Courserve server running on port ${PORT}`);
     });
 }
 

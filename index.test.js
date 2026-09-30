@@ -1,7 +1,7 @@
 const request = require("supertest");
 const { app, client, coursesCollection } = require("./index");
 
-describe("CourseFlow API", () => {
+describe("Courserve API", () => {
     test("GET /api/courses returns an array", async () => {
         const response = await request(app).get("/api/courses");
 

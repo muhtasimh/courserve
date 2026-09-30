@@ -1,4 +1,4 @@
-name: CourseFlow CI
+name: Courserve CI
 
 on:
   push:

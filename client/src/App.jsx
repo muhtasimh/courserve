@@ -245,7 +245,7 @@ function App() {
             SEMESTER PLANNER
           </p>
 
-          <h1>CourseFlow</h1>
+          <h1>Courserve</h1>
 
           <p className="subtitle">
             Plan your semester. Track your progress.

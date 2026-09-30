@@ -1,12 +1,12 @@
-# CourseFlow
+# Courserve
 
-CourseFlow is a full-stack semester planning application for managing courses and tracking academic progress.
+Courserve is a full-stack semester planning application for managing courses and tracking academic progress.
 
 The application uses a React frontend, an Express REST API, and MongoDB for persistent course storage.
 
 ## Live Demo
 
-CourseFlow is deployed on Microsoft Azure App Service with MongoDB Atlas for persistent cloud data storage.
+Courserve is deployed on Microsoft Azure App Service with MongoDB Atlas for persistent cloud data storage.
 
 ## Engineering
 
@@ -53,7 +53,7 @@ CourseFlow is deployed on Microsoft Azure App Service with MongoDB Atlas for per
 
 ## Architecture
 
-CourseFlow uses a client-server architecture:
+Courserve uses a client-server architecture:
 
 React Frontend → Express REST API → MongoDB
 
@@ -88,5 +88,5 @@ Available statuses are:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/muhtasimh/courseflow.git
-cd courseflow
+git clone https://github.com/muhtasimh/Courserve.git
+cd Courserve
