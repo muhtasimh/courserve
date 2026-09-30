@@ -46,6 +46,8 @@ test("PUT /api/courses/:id updates a course", async () => {
             completed: false
         });
 
+    console.log(createResponse.body);
+
     const courseId = createResponse.body.course._id;
 
     const response = await request(app)
@@ -70,6 +72,8 @@ test("DELETE /api/courses/:id deletes a course", async () => {
             completed: false
         });
 
+    console.log(createResponse.body);
+
     const courseId = createResponse.body.course._id;
 
     const response = await request(app)
@@ -89,6 +93,8 @@ test("updated course data persists in MongoDB", async () => {
             credits: 3,
             completed: false
         });
+
+    console.log(createResponse.body);
 
     const courseId = createResponse.body.course._id;
 
