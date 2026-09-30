@@ -30,16 +30,25 @@ app.get("/api/courses", async (req, res) => {
 });
 
 app.post("/api/courses", async (req, res) => {
-    const course = req.body;
-    const result = await coursesCollection.insertOne(course);
+    try {
+        const course = req.body;
 
-    res.json({
-        message: "Course received successfully",
-        course: {
-            ...course,
-            _id: result.insertedId
-        }
-    });
+        const result = await coursesCollection.insertOne(course);
+
+        res.status(200).json({
+            message: "Course received successfully",
+            course: {
+                ...course,
+                _id: result.insertedId.toString()
+            }
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            error: error.message
+        });
+    }
 });
 
 app.put("/api/courses/:id", async (req, res) => {
