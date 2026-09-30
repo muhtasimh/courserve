@@ -58,12 +58,12 @@ jobs:
         with:
           name: node-app
 
-      - name: Login to Azure
-        uses: azure/login@v2
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_881C97D59C5C4DE8849EBE952672234B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_31A09FEE34DF47EA8D373ECF781192AD }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_10621726F9694F18BDF9FE06DEA3DC66 }}
+        app-name: 'courseflow-muhtasim'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: .
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
