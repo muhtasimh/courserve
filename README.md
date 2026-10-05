@@ -20,7 +20,7 @@ The application is deployed on Microsoft Azure App Service with MongoDB Atlas fo
 - Responsive user interface
 - Form validation and API error handling
 
-## Engineering
+## Development
 
 - REST API built with Node.js and Express
 - Automated API testing with Jest and Supertest
