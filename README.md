@@ -44,7 +44,6 @@ The application is deployed on Microsoft Azure App Service with MongoDB Atlas fo
 - Node.js
 - Express.js
 - MongoDB
-- MongoDB Node.js Driver
 
 ### Testing & Deployment
 
