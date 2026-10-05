@@ -52,4 +52,3 @@ The application is deployed on Microsoft Azure App Service with MongoDB Atlas fo
 - GitHub Actions
 - Microsoft Azure App Service
 - MongoDB Atlas
-- Git
